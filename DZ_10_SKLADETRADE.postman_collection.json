@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "3082c2e5-b724-4330-b657-c54ac9c14f5a",
+		"name": "DZ_10_SKLADETRADE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41322591"
+	},
+	"item": [
+		{
+			"name": "Сорт_низкие цены",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{category: 1, search: null, sort: \"name\", offset: 0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.skillfactory.ru/catalog/",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"skillfactory",
+						"ru"
+					],
+					"path": [
+						"catalog",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Сорт_от А до Я",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category\": null,\r\n  \"search\": null,\r\n  \"sort\": \"name\",\r\n  \"offset\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.skillfactory.ru/api/catalog/filter/",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"skillfactory",
+						"ru"
+					],
+					"path": [
+						"api",
+						"catalog",
+						"filter",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Сорт_от Я до А",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category\": null,\r\n  \"search\": null,\r\n  \"sort\": \"-name\",\r\n  \"offset\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.skillfactory.ru/api/catalog/filter/",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"skillfactory",
+						"ru"
+					],
+					"path": [
+						"api",
+						"catalog",
+						"filter",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Сорт_Чай",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category\": 4,\r\n  \"search\": null,\r\n  \"sort\": \"price\",\r\n  \"offset\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.skillfactory.ru/api/catalog/filter/",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"skillfactory",
+						"ru"
+					],
+					"path": [
+						"api",
+						"catalog",
+						"filter",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Сорт_Консервы",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"category\": 1,\r\n  \"search\": null,\r\n  \"sort\": \"price\",\r\n  \"offset\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa.skillfactory.ru/api/catalog/filter/",
+					"protocol": "https",
+					"host": [
+						"qa",
+						"skillfactory",
+						"ru"
+					],
+					"path": [
+						"api",
+						"catalog",
+						"filter",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
